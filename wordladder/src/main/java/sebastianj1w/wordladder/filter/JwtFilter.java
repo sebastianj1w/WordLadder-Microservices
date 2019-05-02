@@ -1,4 +1,4 @@
-package sebastianj1w.login_microservice.filter;
+package sebastianj1w.wordladder.filter;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

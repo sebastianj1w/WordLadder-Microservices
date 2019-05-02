@@ -12,7 +12,7 @@ import java.util.Date;
 
 @RestController
 public class LoginController {
-
+    private static final long EXPIRE_TIME = 5*60*1000;
 //    @Autowired
     private UserService userService = new UserService();
 
@@ -25,14 +25,10 @@ public class LoginController {
             throw new ServletException("Please fill in username and password");
         }
         // Create Twt token
-        String jwtToken = Jwts.builder().setSubject(userDTO.getId()).claim("roles", "member").setIssuedAt(new Date())
+        Date date = new Date(System.currentTimeMillis()+EXPIRE_TIME);
+        String jwtToken = Jwts.builder().setSubject(userDTO.getId()).claim("roles", "member").setExpiration(date).setIssuedAt(new Date())
                 .signWith(SignatureAlgorithm.HS256, "secretkey").compact();
 
         return jwtToken;
-    }
-
-    @RequestMapping(value = "/secure")
-    public String get_try() {
-        return "13";
     }
 }

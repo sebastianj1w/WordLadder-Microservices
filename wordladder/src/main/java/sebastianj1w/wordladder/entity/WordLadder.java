@@ -1,4 +1,4 @@
-package sebastianj1w.wordladder;
+package sebastianj1w.wordladder.entity;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ public class WordLadder {
     private boolean found = false;
     private boolean err = false;
     private String err_message = "";
-    WordLadder() {}
+    public WordLadder() {}
 
     public String getStartingWord() {
         return startingWord;
@@ -50,7 +50,7 @@ public class WordLadder {
         this.err_message = err_message;
     }
 
-    WordLadder(String start, String end, Set<String> wordSet) {
+    public WordLadder(String start, String end, Set<String> wordSet) {
         this.startingWord = start;
         this.endingWord = end;
 

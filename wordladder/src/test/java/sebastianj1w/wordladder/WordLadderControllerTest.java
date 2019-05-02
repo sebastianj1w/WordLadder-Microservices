@@ -1,9 +1,7 @@
 package sebastianj1w.wordladder;
 
 
-import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import net.sf.json.JsonConfig;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,13 +13,13 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-import sebastianj1w.wordladder.WordLadder;
+import sebastianj1w.wordladder.entity.WordLadder;
 
 import java.util.Set;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static sebastianj1w.wordladder.WordLadderController.loadDict;
+import static sebastianj1w.wordladder.controller.WordLadderController.loadDict;
 
 
 @RunWith(SpringRunner.class)

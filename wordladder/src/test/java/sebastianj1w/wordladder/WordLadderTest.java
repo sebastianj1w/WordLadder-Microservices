@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.junit.Assert;
 
 import org.junit.Test;
-import sebastianj1w.wordladder.WordLadder;
+import sebastianj1w.wordladder.entity.WordLadder;
 
 
 import java.util.Set;
@@ -20,7 +20,7 @@ import java.util.Stack;
 
 
 
-import static sebastianj1w.wordladder.WordLadderController.loadDict;
+import static sebastianj1w.wordladder.controller.WordLadderController.loadDict;
 
 
 

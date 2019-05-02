@@ -1,15 +1,14 @@
-package sebastianj1w.wordladder;
+package sebastianj1w.wordladder.controller;
 
 import java.io.*;
 import java.util.Set;
 import java.util.TreeSet;
 
-import org.apache.el.stream.Stream;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import sebastianj1w.wordladder.WordLadder;
+import sebastianj1w.wordladder.entity.WordLadder;
 
 @RestController
 @RequestMapping("/word_ladder")
@@ -28,7 +27,7 @@ public class WordLadderController {
     }
 
 
-    static Set<String> loadDict(String path) {
+    public static Set<String> loadDict(String path) {
         Set<String> wordSet = new TreeSet<>();
         try {
 //            System.out.println("loading");

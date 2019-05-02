@@ -1,9 +1,9 @@
-package sebastianj1w.login_microservice.config;
+package sebastianj1w.wordladder.config;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import sebastianj1w.login_microservice.filter.JwtFilter;
+import sebastianj1w.wordladder.filter.JwtFilter;
 
 @Configuration
 public class JwtCfg {
@@ -12,7 +12,7 @@ public class JwtCfg {
     public FilterRegistrationBean jwtFilter() {
         final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         registrationBean.setFilter(new JwtFilter());
-        registrationBean.addUrlPatterns("/secure/*");
+        registrationBean.addUrlPatterns("/word_ladder/*");
 
         return registrationBean;
     }
